@@ -1,4 +1,8 @@
-# コンテナにSSH接続をする
+# コンテナにSSH接続をする <!-- omit in toc -->
+
+- [参考](#参考)
+- [コンテナの作成接続](#コンテナの作成接続)
+- [sshサーバのインストール](#sshサーバのインストール)
 
 # 参考
 
@@ -32,7 +36,7 @@
 
 5. sshデーモン（sshd）の再起動<br>
 `service ssh start`<br>
-※Starting OpenBSD Secure Shell server sshdが表示されたこと
+※Starting OpenBSD Secure Shell server sshd [OK]が表示されたこと
 6. サービスの状態確認<br>
 `service --status-all`<br>
 ※[-] ssh は、サービスが停止状態であること[+]は起動状態

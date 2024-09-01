@@ -1,12 +1,22 @@
-# Docker Desktopを利用してUbuntuの初期セットアップ
+# Docker Desktopを利用してUbuntuの初期セットアップ <!-- omit in toc -->
+- [前提](#前提)
+- [手順](#手順)
+- [Docker Desktopインストール](#docker-desktopインストール)
+- [Ubuntuコンテナの構築](#ubuntuコンテナの構築)
+  - [ubuntuイメージの取得](#ubuntuイメージの取得)
+  - [ubuntuコンテナの作成・起動](#ubuntuコンテナの作成起動)
+  - [ubuntuコンテナ内に色々入れていく](#ubuntuコンテナ内に色々入れていく)
+    - [最新パッケージ情報を再取得](#最新パッケージ情報を再取得)
+    - [vimのインストール](#vimのインストール)
+    - [sudoインストール](#sudoインストール)
+    - [viewのインストール](#viewのインストール)
+    - [ユーザ作成](#ユーザ作成)
 
 # 前提
 
 - 実行環境
 macOS：Ventura（13.6.4（22G513））
-    
-    ![実行環境.pnp](実行環境.png)
-    
+![実行環境.pnp](実行環境.png)
 
 # 手順
 
