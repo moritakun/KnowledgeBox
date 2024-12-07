@@ -36,16 +36,16 @@ exitでコンテナから抜けて、`docker restart <コンテナ名 or ID>`を
 3. 基本設定
 `touch ~/.vnc/xstartup`
     1. xstartup編集
-        
+
         ```powershell
         #!/bin/bash
         /etc/X11/Xtigervnc-session
         gnome-session
         ```
-        
+
     2. ファイル権限変更
     `chmod +x ./vnc/xstartup`
-4. config設定
+1. config設定
 `touch ~/.vnc/config`
     1. config編集
         
@@ -59,7 +59,7 @@ exitでコンテナから抜けて、`docker restart <コンテナ名 or ID>`を
         
     2. ファイル権限変更
     `chmod +x ./vnc/config` 
-5. TigerVNCへアクセスできるユーザを設定
+1. TigerVNCへアクセスできるユーザを設定
     1. `/etc/tigervnc/vncserver.users`を編集
         
         ```powershell
@@ -74,17 +74,17 @@ exitでコンテナから抜けて、`docker restart <コンテナ名 or ID>`を
         ※システムユーザである必要がある？
         ```
         
-6. サービスファイルのコピー
+2. サービスファイルのコピー
 `cp /usr/lib/systemd/system/tigervncserver\@.service /etc/systemd/system/tigervncserver\@.service`
     1. サービスファイルの編集
     `ExecStart=/usr/libexec/tigervncsession-start %i` を`ExecStart=/usr/libexec/tigervncsession-start　<ユーザ名> %i` に修正
     ※`ExecStart=/usr/libexec/tigervncsession-start　<ユーザ名> %i`は　`/etc/tigervnc/vncserver.users` の記載ユーザと念の為同一にする
-7. 設定ファイルで定義したユーザのパスワードを設定する
+1. 設定ファイルで定義したユーザのパスワードを設定する
 `su - <ユーザ>`
 `vncpasswd`
-8. TigerVNC起動
+1. TigerVNC起動
 `vncserver`
-9. 
+1. 
 
 ### noVNTのインストール
 
